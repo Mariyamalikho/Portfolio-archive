@@ -7,3 +7,4 @@
 - 2026-06-04T17:34:21 : feat: draft header layout
 - 2026-06-06T20:34:22 : style: tweak typography settings
 - 2026-06-08T18:34:22 : feat: placeholder for hero section
+- 2026-06-10T14:34:22 : docs: update technical requirements
