@@ -8,3 +8,4 @@
 - 2026-06-06T20:34:22 : style: tweak typography settings
 - 2026-06-08T18:34:22 : feat: placeholder for hero section
 - 2026-06-10T14:34:22 : docs: update technical requirements
+- 2026-06-13T20:34:22 : feat: implement basic routing
