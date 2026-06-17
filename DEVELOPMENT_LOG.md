@@ -10,3 +10,4 @@
 - 2026-06-10T14:34:22 : docs: update technical requirements
 - 2026-06-13T20:34:22 : feat: implement basic routing
 - 2026-06-15T14:34:22 : style: add responsive breakpoints
+- 2026-06-17T21:34:22 : refactor: extract common ui components
