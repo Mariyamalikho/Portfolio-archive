@@ -12,3 +12,4 @@
 - 2026-06-15T14:34:22 : style: add responsive breakpoints
 - 2026-06-17T21:34:22 : refactor: extract common ui components
 - 2026-06-20T16:34:23 : feat: start work on case studies grid
+- 2026-06-22T14:34:23 : style: adjust grid gaps and padding
