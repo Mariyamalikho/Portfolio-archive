@@ -14,3 +14,4 @@
 - 2026-06-20T16:34:23 : feat: start work on case studies grid
 - 2026-06-22T14:34:23 : style: adjust grid gaps and padding
 - 2026-06-24T14:34:23 : feat: add hover states to cards
+- 2026-06-27T19:34:23 : perf: optimize image loading in grid
