@@ -16,3 +16,4 @@
 - 2026-06-24T14:34:23 : feat: add hover states to cards
 - 2026-06-27T19:34:23 : perf: optimize image loading in grid
 - 2026-06-29T21:34:23 : feat: draft footer component
+- 2026-07-01T21:34:24 : style: polish footer links
