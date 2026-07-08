@@ -19,3 +19,4 @@
 - 2026-07-01T21:34:24 : style: polish footer links
 - 2026-07-04T20:34:24 : docs: draft initial README content
 - 2026-07-06T20:34:24 : feat: add canvas element for animations
+- 2026-07-08T20:34:24 : chore: update framer-motion library
