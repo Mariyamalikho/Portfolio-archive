@@ -20,3 +20,4 @@
 - 2026-07-04T20:34:24 : docs: draft initial README content
 - 2026-07-06T20:34:24 : feat: add canvas element for animations
 - 2026-07-08T20:34:24 : chore: update framer-motion library
+- 2026-07-11T19:34:24 : feat: test basic scroll animations
