@@ -23,3 +23,4 @@
 - 2026-07-11T19:34:24 : feat: test basic scroll animations
 - 2026-07-13T17:34:24 : style: tweak transition timings
 - 2026-07-15T18:34:24 : refactor: clean up unused variables
+- 2026-07-17T15:34:25 : perf: audit rendering performance
