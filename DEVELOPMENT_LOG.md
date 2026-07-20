@@ -24,3 +24,4 @@
 - 2026-07-13T17:34:24 : style: tweak transition timings
 - 2026-07-15T18:34:24 : refactor: clean up unused variables
 - 2026-07-17T15:34:25 : perf: audit rendering performance
+- 2026-07-20T19:34:25 : feat: add subtle background glows
