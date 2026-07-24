@@ -1,0 +1,11 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="128" fill="#0E0E10"/>
+  <path d="M256 144L368 200V312L256 368L144 312V200L256 144Z" fill="url(#cube-gradient)" stroke="#C084FC" stroke-width="16" stroke-linejoin="round"/>
+  <path d="M256 144V256M368 200L256 256M144 200L256 256" stroke="#C084FC" stroke-width="16" stroke-linejoin="round"/>
+  <defs>
+    <linearGradient id="cube-gradient" x1="256" y1="144" x2="256" y2="368" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C084FC"/>
+      <stop offset="1" stop-color="#7E22CE"/>
+    </linearGradient>
+  </defs>
+</svg>
