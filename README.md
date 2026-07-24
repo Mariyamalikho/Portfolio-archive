@@ -32,7 +32,7 @@ Premium editorial experiences and modern product storytelling inspire Portfolio 
 ## ⚡ Getting Started
 
 ```bash
-git clone https://github.com/yourusername/portfolio-archive.git
+git clone https://github.com/Mariyamalikho/Portfolio-archive.git
 
 cd portfolio-archive
 
