@@ -26,3 +26,4 @@
 - 2026-07-17T15:34:25 : perf: audit rendering performance
 - 2026-07-20T19:34:25 : feat: add subtle background glows
 - 2026-07-22T20:34:25 : style: finalize mobile layout
+- 2026-07-24T20:34:25 : chore: prepare for production build
