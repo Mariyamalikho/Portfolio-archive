@@ -8,16 +8,36 @@ interface NarrativeOverlayProps {
 
 export function NarrativeOverlay({ scrollYProgress }: NarrativeOverlayProps) {
   // Keyframe Window 1: 0.00 - 0.20 (Title Scene)
-  const opacity1 = useTransform(scrollYProgress, [0, 0.12, 0.18, 0.22], [1, 1, 0.15, 0]);
+  const opacity1 = useTransform(
+    scrollYProgress,
+    [0, 0.12, 0.18, 0.22],
+    [1, 1, 0.15, 0],
+  );
   const y1 = useTransform(scrollYProgress, [0, 0.22], [0, -30]);
 
   // Keyframe Window 2: 0.35 - 0.55 (Systems & Workflows)
-  const opacity2 = useTransform(scrollYProgress, [0.28, 0.35, 0.50, 0.55], [0, 1, 1, 0]);
-  const y2 = useTransform(scrollYProgress, [0.28, 0.35, 0.50, 0.55], [30, 0, 0, -30]);
+  const opacity2 = useTransform(
+    scrollYProgress,
+    [0.28, 0.35, 0.5, 0.55],
+    [0, 1, 1, 0],
+  );
+  const y2 = useTransform(
+    scrollYProgress,
+    [0.28, 0.35, 0.5, 0.55],
+    [30, 0, 0, -30],
+  );
 
   // Keyframe Window 3: 0.70 - 0.90 (Creative Vision / Production Rigor)
-  const opacity3 = useTransform(scrollYProgress, [0.63, 0.70, 0.85, 0.90], [0, 1, 1, 0]);
-  const y3 = useTransform(scrollYProgress, [0.63, 0.70, 0.85, 0.90], [30, 0, 0, -30]);
+  const opacity3 = useTransform(
+    scrollYProgress,
+    [0.63, 0.7, 0.85, 0.9],
+    [0, 1, 1, 0],
+  );
+  const y3 = useTransform(
+    scrollYProgress,
+    [0.63, 0.7, 0.85, 0.9],
+    [30, 0, 0, -30],
+  );
 
   return (
     <div className="absolute inset-0 z-10 w-full h-full pointer-events-none select-none">
@@ -45,7 +65,9 @@ export function NarrativeOverlay({ scrollYProgress }: NarrativeOverlayProps) {
           <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-[#A855F7]/5 to-transparent pointer-events-none" />
           <h1 className="relative text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white max-w-3xl leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
             Case Studies:
-            <span className="block mt-1 font-light text-neutral-300">Selected Works</span>
+            <span className="block mt-1 font-light text-neutral-300">
+              Selected Works
+            </span>
           </h1>
         </div>
         <p className="mt-6 text-xs md:text-sm text-neutral-200 font-mono tracking-[0.25em] max-w-md bg-black/40 px-5 py-2.5 rounded-full border border-white/10 backdrop-blur-sm">
@@ -65,13 +87,15 @@ export function NarrativeOverlay({ scrollYProgress }: NarrativeOverlayProps) {
               Systems & Workflows
             </span>
           </div>
-          
+
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
             Scalable Architectures & Interactive Systems
           </h2>
-          
+
           <p className="text-sm md:text-base text-neutral-200 leading-relaxed font-sans max-w-md drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)]">
-            Translating complex technical processes and project guidelines into structured digital workflows, clean documentation, and highly accessible system designs.
+            Translating complex technical processes and project guidelines into
+            structured digital workflows, clean documentation, and highly
+            accessible system designs.
           </p>
         </div>
       </motion.div>
@@ -88,13 +112,15 @@ export function NarrativeOverlay({ scrollYProgress }: NarrativeOverlayProps) {
             </span>
             <span className="h-1.5 w-1.5 rounded-full bg-[#C084FC] animate-pulse" />
           </div>
-          
+
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
             Bridging Creative Vision with Technical Rigor
           </h2>
-          
+
           <p className="text-sm md:text-base text-neutral-200 leading-relaxed font-sans max-w-md drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)]">
-            Fusing design aesthetics with operational metrics, user-centered details, and seamless cross-functional delivery to optimize product efficiency.
+            Fusing design aesthetics with operational metrics, user-centered
+            details, and seamless cross-functional delivery to optimize product
+            efficiency.
           </p>
         </div>
       </motion.div>

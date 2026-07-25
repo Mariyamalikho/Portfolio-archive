@@ -1,7 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useScroll, useTransform, AnimatePresence, motion } from "framer-motion";
+import {
+  useScroll,
+  useTransform,
+  AnimatePresence,
+  motion,
+} from "framer-motion";
 import { NarrativeOverlay } from "./NarrativeOverlay";
 import { CaseStudiesGrid } from "./CaseStudiesGrid";
 
@@ -27,7 +32,11 @@ export function ScrollyCanvas() {
   });
 
   // Map scroll progress [0, 1] to frame indices [0, 119]
-  const targetFrameIndex = useTransform(scrollYProgress, [0, 1], [0, FRAME_COUNT - 1]);
+  const targetFrameIndex = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0, FRAME_COUNT - 1],
+  );
 
   // Layer 1 (The WebP Canvas): Smoothly fade canvas opacity from 1.0 down to 0.0 from progress 0.80 to 0.95
   const canvasOpacity = useTransform(scrollYProgress, [0.85, 0.97], [1, 0]);
@@ -55,7 +64,9 @@ export function ScrollyCanvas() {
     const handleImageLoad = () => {
       if (!active) return;
       loadedCount++;
-      setLoadProgress(Math.min(100, Math.round((loadedCount / FRAME_COUNT) * 100)));
+      setLoadProgress(
+        Math.min(100, Math.round((loadedCount / FRAME_COUNT) * 100)),
+      );
       if (loadedCount === FRAME_COUNT) {
         setImages(preloadedImages);
         imagesRef.current = preloadedImages;
@@ -64,7 +75,10 @@ export function ScrollyCanvas() {
     };
 
     const handleImageError = (e: ErrorEvent | string) => {
-      console.warn("Failed to load frame image. Falling back to next frame.", e);
+      console.warn(
+        "Failed to load frame image. Falling back to next frame.",
+        e,
+      );
       handleImageLoad();
     };
 
@@ -147,10 +161,13 @@ export function ScrollyCanvas() {
 
       const drawIndex = Math.min(
         FRAME_COUNT - 1,
-        Math.max(0, Math.round(currentFrameIndexRef.current))
+        Math.max(0, Math.round(currentFrameIndexRef.current)),
       );
 
-      if (drawIndex !== lastDrawnIndexRef.current || lastDrawnIndexRef.current === -1) {
+      if (
+        drawIndex !== lastDrawnIndexRef.current ||
+        lastDrawnIndexRef.current === -1
+      ) {
         drawFrame(drawIndex);
         lastDrawnIndexRef.current = drawIndex;
       }
@@ -200,7 +217,7 @@ export function ScrollyCanvas() {
               <h2 className="text-xl md:text-2xl font-bold tracking-tight text-white">
                 Preloading Timeline Assets
               </h2>
-              
+
               <div className="relative w-full h-[2px] bg-neutral-900 overflow-hidden rounded-full">
                 <motion.div
                   className="absolute top-0 left-0 h-full bg-gradient-to-r from-purple-500 to-fuchsia-500"
@@ -218,10 +235,12 @@ export function ScrollyCanvas() {
       </AnimatePresence>
 
       {/* Main 450vh scroll track */}
-      <div ref={containerRef} className="relative h-[350vh] w-full bg-[#0B0B0C] select-none">
+      <div
+        ref={containerRef}
+        className="relative h-[350vh] w-full bg-[#0B0B0C] select-none"
+      >
         {/* Sticky child container */}
         <div className="sticky top-0 left-0 h-screen w-screen overflow-hidden">
-          
           {/* Layer 2 (The Ambient Void Canvas - New): Interactive radial background moving slow */}
           <motion.div
             animate={{
@@ -229,13 +248,13 @@ export function ScrollyCanvas() {
                 "radial-gradient(circle at 50% 50%, #1C0D26 0%, #0B0B0C 100%)",
                 "radial-gradient(circle at 45% 55%, #241133 0%, #0B0B0C 100%)",
                 "radial-gradient(circle at 55% 45%, #170A20 0%, #0B0B0C 100%)",
-                "radial-gradient(circle at 50% 50%, #1C0D26 0%, #0B0B0C 100%)"
-              ]
+                "radial-gradient(circle at 50% 50%, #1C0D26 0%, #0B0B0C 100%)",
+              ],
             }}
             transition={{
               duration: 15,
               repeat: Infinity,
-              ease: "easeInOut"
+              ease: "easeInOut",
             }}
             className="absolute inset-0 w-full h-full"
           />
@@ -249,7 +268,7 @@ export function ScrollyCanvas() {
 
           {/* Subtle vignette layer overlay */}
           <div className="absolute inset-0 bg-[#0B0B0C]/10 pointer-events-none" />
-          
+
           {/* Render Narrative Overlay */}
           <NarrativeOverlay scrollYProgress={scrollYProgress} />
         </div>

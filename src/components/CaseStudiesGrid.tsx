@@ -10,7 +10,8 @@ const CASE_STUDIES = [
     role: "Innovation Intern",
     timeline: "Nov 2025 – Apr 2026",
     location: "Stockholm (Remote)",
-    description: "Organized and structured digital assets to improve internal knowledge accessibility across global teams. Supported reporting workflows aligned with tech-enabled social impact initiatives.",
+    description:
+      "Organized and structured digital assets to improve internal knowledge accessibility across global teams. Supported reporting workflows aligned with tech-enabled social impact initiatives.",
     metric: "Global Knowledge Base",
     metricLabel: "Structured Assets & Presentations",
     icon: Database,
@@ -18,8 +19,8 @@ const CASE_STUDIES = [
     details: [
       "Organized digital assets for global team access.",
       "Documented workflows across cross-functional teams.",
-      "Prepared presentations for key stakeholders."
-    ]
+      "Prepared presentations for key stakeholders.",
+    ],
   },
   {
     id: "02",
@@ -27,7 +28,8 @@ const CASE_STUDIES = [
     role: "Trade Apprentice",
     timeline: "Dec 2022 – Dec 2024",
     location: "Pakistan",
-    description: "Conducted packet integrity testing and digitally documented quality compliance inspection findings, tracking machine downtime and generating weekly OEE (Overall Equipment Efficiency) reports.",
+    description:
+      "Conducted packet integrity testing and digitally documented quality compliance inspection findings, tracking machine downtime and generating weekly OEE (Overall Equipment Efficiency) reports.",
     metric: "OEE Optimization",
     metricLabel: "Integrity Compliance (LS, SA, TS)",
     icon: ShieldCheck,
@@ -35,8 +37,8 @@ const CASE_STUDIES = [
     details: [
       "Performed packet integrity testing (LS, SA, TS).",
       "Digitized inspection findings for traceability.",
-      "Analyzed machine downtime & performance trends."
-    ]
+      "Analyzed machine downtime & performance trends.",
+    ],
   },
   {
     id: "03",
@@ -44,7 +46,8 @@ const CASE_STUDIES = [
     role: "Illustrator & Graphic Designer",
     timeline: "Dec 2020 – Sep 2023",
     location: "Daastan / Freelance",
-    description: "Translated complex narratives into visual storytelling. Produced multi-format assets optimized for digital and print platforms, delivering over 100 branding, illustration, and digital projects.",
+    description:
+      "Translated complex narratives into visual storytelling. Produced multi-format assets optimized for digital and print platforms, delivering over 100 branding, illustration, and digital projects.",
     metric: "100+ Visual Assets",
     metricLabel: "Narratives & Brand Projects Deliveries",
     icon: Layers,
@@ -52,16 +55,15 @@ const CASE_STUDIES = [
     details: [
       "Delivered 100+ branding and design projects.",
       "Created 10+ weekly visual assets for campaigns.",
-      "Translated complex text narratives into visuals."
-    ]
-  }
+      "Translated complex text narratives into visuals.",
+    ],
+  },
 ];
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 export function CaseStudiesGrid() {
   return (
     <section className="relative w-full py-32 px-6 md:px-12 lg:px-24 text-white overflow-hidden">
-
       {/* Subtle amethyst blob glow */}
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-purple-900/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-fuchsia-900/8 rounded-full blur-[100px] pointer-events-none" />
@@ -83,7 +85,9 @@ export function CaseStudiesGrid() {
           </div>
           <div className="flex flex-col items-start md:items-end gap-3">
             <p className="text-xs md:text-sm font-mono text-neutral-500 max-w-xs md:text-right md:leading-relaxed">
-              Detailed inspection, metrics analysis,<br />and operational results.
+              Detailed inspection, metrics analysis,
+              <br />
+              and operational results.
             </p>
             <motion.div
               className="flex items-center gap-2 text-[10px] uppercase tracking-[0.25em] font-mono text-neutral-600"
@@ -103,7 +107,11 @@ export function CaseStudiesGrid() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 animate={{ y: [0, 4, 0] }}
-                transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
+                transition={{
+                  duration: 1.4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
               >
                 <path d="M12 5v14M5 12l7 7 7-7" />
               </motion.svg>
@@ -116,7 +124,11 @@ export function CaseStudiesGrid() {
           {CASE_STUDIES.map((study, index) => {
             const IconComponent = study.icon;
             const offsetClass =
-              index === 1 ? "lg:translate-y-8" : index === 2 ? "lg:translate-y-16" : "";
+              index === 1
+                ? "lg:translate-y-8"
+                : index === 2
+                  ? "lg:translate-y-16"
+                  : "";
 
             return (
               <motion.div
@@ -124,7 +136,11 @@ export function CaseStudiesGrid() {
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.6, delay: index * 0.15, ease: [0.25, 1, 0.5, 1] }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.15,
+                  ease: [0.25, 1, 0.5, 1],
+                }}
                 className={`group relative flex flex-col justify-between rounded-2xl border border-white/[0.03] bg-white/[0.01] p-8 md:p-10 backdrop-blur-md transition-all duration-500 hover:border-purple-500/30 hover:bg-white/[0.02] hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(168,85,247,0.05)] ${offsetClass}`}
               >
                 <div

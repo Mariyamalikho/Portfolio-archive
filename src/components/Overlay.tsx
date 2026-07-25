@@ -12,11 +12,19 @@ export function Overlay({ scrollYProgress }: OverlayProps) {
   const y1 = useTransform(scrollYProgress, [0, 0.25], [0, -100]);
 
   // Section 2: 25% to 55%
-  const opacity2 = useTransform(scrollYProgress, [0.2, 0.3, 0.45, 0.55], [0, 1, 1, 0]);
+  const opacity2 = useTransform(
+    scrollYProgress,
+    [0.2, 0.3, 0.45, 0.55],
+    [0, 1, 1, 0],
+  );
   const y2 = useTransform(scrollYProgress, [0.2, 0.55], [100, -100]);
 
   // Section 3: 55% to 85%
-  const opacity3 = useTransform(scrollYProgress, [0.5, 0.6, 0.75, 0.9], [0, 1, 1, 0]);
+  const opacity3 = useTransform(
+    scrollYProgress,
+    [0.5, 0.6, 0.75, 0.9],
+    [0, 1, 1, 0],
+  );
   const y3 = useTransform(scrollYProgress, [0.5, 0.9], [100, -100]);
 
   return (
@@ -40,7 +48,8 @@ export function Overlay({ scrollYProgress }: OverlayProps) {
         className="absolute inset-y-0 left-0 flex flex-col justify-center px-8 md:px-24 w-full md:w-2/3"
       >
         <h2 className="text-4xl md:text-6xl font-semibold tracking-tight leading-tight">
-          Translating complex <br /> <span className="italic text-white/70">technical processes</span>
+          Translating complex <br />{" "}
+          <span className="italic text-white/70">technical processes</span>
         </h2>
         <p className="mt-6 text-lg md:text-xl text-white/50 max-w-sm">
           into structured workflows and clear visual narratives.

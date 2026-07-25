@@ -12,9 +12,9 @@ interface Particle {
 }
 
 const COLORS = [
-  "168,85,247",  // amethyst purple
+  "168,85,247", // amethyst purple
   "216,180,254", // light purple
-  "236,72,153",  // pink
+  "236,72,153", // pink
   "192,132,252", // mid purple
 ];
 
@@ -40,9 +40,9 @@ export function ParticleBackground() {
       particlesRef.current = Array.from({ length: COUNT }, () => ({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.18,   // slower drift
+        vx: (Math.random() - 0.5) * 0.18, // slower drift
         vy: (Math.random() - 0.5) * 0.18,
-        radius: Math.random() * 1.2 + 0.4,  // smaller dots
+        radius: Math.random() * 1.2 + 0.4, // smaller dots
         colorIdx: Math.floor(Math.random() * COLORS.length),
       }));
     };

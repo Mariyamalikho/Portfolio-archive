@@ -5,20 +5,48 @@ import { motion } from "framer-motion";
 const SKILLS_DATA = [
   {
     category: "Technical Skills",
-    skills: ["Microsoft Office", "Adobe Illustrator", "Photoshop", "Figma", "HTML/CSS", "JavaScript", "C / C++", "WordPress", "Bitrix24", "SEO Fundamentals"]
+    skills: [
+      "Microsoft Office",
+      "Adobe Illustrator",
+      "Photoshop",
+      "Figma",
+      "HTML/CSS",
+      "JavaScript",
+      "C / C++",
+      "WordPress",
+      "Bitrix24",
+      "SEO Fundamentals",
+    ],
   },
   {
     category: "Core & Digital",
-    skills: ["Digital Workflow Documentation", "Innovation & IT Support", "Data Reporting & Analysis", "Process Optimization"]
+    skills: [
+      "Digital Workflow Documentation",
+      "Innovation & IT Support",
+      "Data Reporting & Analysis",
+      "Process Optimization",
+    ],
   },
   {
     category: "Communication & Media",
-    skills: ["Digital Content Creation", "Visual Storytelling", "Social Media Strategy", "Copywriting", "Multimedia Editing"]
+    skills: [
+      "Digital Content Creation",
+      "Visual Storytelling",
+      "Social Media Strategy",
+      "Copywriting",
+      "Multimedia Editing",
+    ],
   },
   {
     category: "Professional",
-    skills: ["Cross-functional Collaboration", "Stakeholder Communication", "Project Coordination", "Analytical Thinking", "Adaptability"]
-  }
+    skills: [
+      "Cross-functional Collaboration",
+      "Stakeholder Communication",
+      "Project Coordination",
+      "Analytical Thinking",
+      "Adaptability",
+    ],
+  },
 ];
 
 const CERTIFICATIONS = [
@@ -26,7 +54,7 @@ const CERTIFICATIONS = [
   "Google Prompting Essentials",
   "Google AI Essentials Specialization",
   "WordPress Development Certification",
-  "ISO/IEC 27001 Information Security Associate"
+  "ISO/IEC 27001 Information Security Associate",
 ];
 
 export function Skills() {
@@ -51,10 +79,15 @@ export function Skills() {
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               className="p-8 rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur-md shadow-xl shadow-black/10 hover:bg-white/[0.04] hover:border-purple-500/30 transition-all duration-500 hover:shadow-purple-500/5"
             >
-              <h3 className="text-xl font-semibold mb-6 text-white/90">{group.category}</h3>
+              <h3 className="text-xl font-semibold mb-6 text-white/90">
+                {group.category}
+              </h3>
               <div className="flex flex-wrap gap-2">
-                {group.skills.map(skill => (
-                  <span key={skill} className="text-sm px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 backdrop-blur-sm text-white/70 hover:bg-purple-500/25 hover:border-purple-500/40 hover:text-white hover:scale-[1.03] transition-all duration-300 cursor-default">
+                {group.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="text-sm px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 backdrop-blur-sm text-white/70 hover:bg-purple-500/25 hover:border-purple-500/40 hover:text-white hover:scale-[1.03] transition-all duration-300 cursor-default"
+                  >
                     {skill}
                   </span>
                 ))}
@@ -70,10 +103,15 @@ export function Skills() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-purple-500/5 to-pink-500/5 backdrop-blur-md shadow-xl shadow-black/10 hover:from-purple-500/10 hover:to-pink-500/10 transition-all duration-500 hover:border-pink-500/30 hover:shadow-pink-500/5"
         >
-          <h3 className="text-xl font-semibold mb-6 text-white/90 text-center">Certifications</h3>
+          <h3 className="text-xl font-semibold mb-6 text-white/90 text-center">
+            Certifications
+          </h3>
           <div className="flex flex-wrap justify-center gap-4">
-            {CERTIFICATIONS.map(cert => (
-              <span key={cert} className="text-sm px-4 py-2 rounded-full border border-pink-500/20 bg-pink-500/5 backdrop-blur-sm text-white/80 hover:bg-pink-500/15 hover:border-pink-500/40 hover:scale-[1.03] transition-all duration-300">
+            {CERTIFICATIONS.map((cert) => (
+              <span
+                key={cert}
+                className="text-sm px-4 py-2 rounded-full border border-pink-500/20 bg-pink-500/5 backdrop-blur-sm text-white/80 hover:bg-pink-500/15 hover:border-pink-500/40 hover:scale-[1.03] transition-all duration-300"
+              >
                 {cert}
               </span>
             ))}
