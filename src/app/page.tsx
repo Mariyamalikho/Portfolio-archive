@@ -1,4 +1,5 @@
 import { ScrollyCanvas } from "@/components/ScrollyCanvas";
+import { SystemArchitecture } from "@/components/SystemArchitecture";
 import { Projects } from "@/components/Projects";
 import { Experience } from "@/components/Experience";
 import { Skills } from "@/components/Skills";
@@ -21,6 +22,7 @@ export default function Home() {
 
       {/* All content sections below sequence — z-index 2, transparent backgrounds */}
       <div className="relative" style={{ zIndex: 2 }}>
+        <SystemArchitecture />
         <Projects />
         <Experience />
         <Skills />

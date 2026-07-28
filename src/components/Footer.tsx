@@ -19,7 +19,7 @@ export function Footer() {
           <div className="space-y-8">
             <div className="border-l-2 border-purple-500/30 hover:border-purple-500 transition-colors duration-300 pl-6">
               <h4 className="text-xl font-semibold mb-1">Bachelor of Science in Information Technology</h4>
-              <p className="text-white/40 text-sm mb-3 font-mono">Mar 2021 – Sep 2025</p>
+              <p className="text-white/40 text-sm mb-3 font-mono">2021 – 2025</p>
               <p className="text-neutral-400 text-sm leading-relaxed font-sans">
                 Thesis and final-year project on "Personal Finance Tracker". Designed and developed a web-based application that empowers users to manage their income, expenses, and financial trends with ease.
               </p>
