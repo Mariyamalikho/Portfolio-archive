@@ -3,12 +3,14 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
+import { formatDateRange } from "@/utils/formatDate";
+
 const EXPERIENCES = [
   {
     role: "Innovation Intern",
     company: "UNICEF",
     location: "Stockholm County, Sweden (Remote)",
-    date: "Nov 2025 – Apr 2026",
+    date: formatDateRange("2025-11-01", "2026-04-01"),
     details: [
       "Organized and structured digital assets to improve internal knowledge accessibility.",
       "Supported innovation documentation across cross-functional international teams.",
@@ -20,7 +22,7 @@ const EXPERIENCES = [
     role: "Trade Apprentice",
     company: "FrieslandCampina",
     location: "Pakistan",
-    date: "Dec 2022 – Dec 2024",
+    date: formatDateRange("2022-12-01", "2024-12-01"),
     details: [
       "Conducted packet integrity testing (LS, SA, TS) supporting quality compliance.",
       "Digitally documented inspection findings, improving traceability and issue escalation.",
@@ -32,7 +34,7 @@ const EXPERIENCES = [
     role: "Graphic Designer",
     company: "Freelance",
     location: "Online",
-    date: "Dec 2020 – Sep 2023",
+    date: formatDateRange("2020-12-01", "2023-09-01"),
     details: [
       "Produced multi-format assets optimized for digital and print platforms.",
       "Managed full design lifecycle from concept development to final delivery.",
@@ -44,7 +46,7 @@ const EXPERIENCES = [
     role: "Illustrator",
     company: "Daastan",
     location: "Islamabad (Remote)",
-    date: "May 2022 – Feb 2023",
+    date: formatDateRange("2022-05-01", "2023-02-01"),
     details: [
       "Translated complex narratives into clear visual storytelling.",
       "Delivered engagement-focused digital creatives for campaigns.",
@@ -55,7 +57,7 @@ const EXPERIENCES = [
     role: "Graphic Design Intern",
     company: "GAOTek Inc.",
     location: "United States (Remote)",
-    date: "Apr 2022 – Jul 2022",
+    date: formatDateRange("2022-04-01", "2022-07-01"),
     details: [
       "Supported internal documentation using Bitrix24.",
       "Simplified technical concepts into user-friendly visuals and designed technical illustrations."
