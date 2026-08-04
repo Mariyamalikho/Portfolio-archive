@@ -197,6 +197,7 @@ export function Projects() {
         <div className="mt-16 flex items-center gap-8">
           <button 
             onClick={() => paginate(-1)}
+            aria-label="Previous project"
             className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 transition-all hover:scale-110 hover:border-purple-500/50"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -219,6 +220,7 @@ export function Projects() {
 
           <button 
             onClick={() => paginate(1)}
+            aria-label="Next project"
             className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 transition-all hover:scale-110 hover:border-purple-500/50"
           >
             <ChevronRight className="w-6 h-6" />
