@@ -8,11 +8,29 @@ import { CaseStudiesGrid } from "./CaseStudiesGrid";
 const FRAME_COUNT = 120;
 const CHROMA_BG = "#0B0B0C";
 
+/**
+ * Generates the correct WebP asset URL for a given frame index.
+ * We use 0-padded indices (e.g. 000, 001) for the 120-frame sequence.
+ * 
+ * @param index - The zero-based integer index of the frame.
+ * @returns The absolute URL path to the WebP image asset.
+ */
 function getFrameUrl(index: number): string {
   const paddedIndex = index.toString().padStart(3, "0");
   return `/sequence/frame_${paddedIndex}_delay-0.041s.webp`;
 }
 
+/**
+ * ScrollyCanvas Component
+ * 
+ * An advanced scrollytelling component that uses a highly optimized HTML5 Canvas
+ * to render a 120-frame WebP image sequence tied to the user's scroll position.
+ * 
+ * Features:
+ * - Preloads all 120 frames before revealing the canvas.
+ * - Interpolates between scroll targets using requestAnimationFrame for smooth 60fps playback.
+ * - Dynamically calculates object-fit: cover logic within the canvas context based on devicePixelRatio.
+ */
 export function ScrollyCanvas() {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -46,7 +64,13 @@ export function ScrollyCanvas() {
     return () => unsubscribe();
   }, [targetFrameIndex]);
 
-  // 1. Preload 120 frames with deterministic callback logic
+  /**
+   * Effect: Image Preloader
+   * 
+   * Iterates through the FRAME_COUNT and loads all assets into memory.
+   * Calculates a progress percentage for the loading overlay. Updates `isLoaded`
+   * state when all frame onload callbacks have successfully fired.
+   */
   useEffect(() => {
     let active = true;
     const preloadedImages: HTMLImageElement[] = [];
@@ -81,7 +105,15 @@ export function ScrollyCanvas() {
     };
   }, []);
 
-  // 2. Aspect-Ratio Cover Logic with DPR adjustment
+  /**
+   * Helper: Frame Renderer
+   * 
+   * Renders a specific preloaded frame to the 2D canvas context.
+   * Handles devicePixelRatio scaling for retina displays and calculates 
+   * the proper offset/dimensions to simulate CSS `object-fit: cover`.
+   * 
+   * @param index - The target frame index to draw.
+   */
   const drawFrame = (index: number) => {
     const canvas = canvasRef.current;
     const img = imagesRef.current[index];
@@ -127,7 +159,16 @@ export function ScrollyCanvas() {
     ctx.restore();
   };
 
-  // 3. Anti-Stutter Render Loop (requestAnimationFrame interpolation)
+  /**
+   * Effect: High-Performance Animation Loop
+   * 
+   * Rather than binding drawFrame directly to the scroll event (which causes stutter),
+   * we use a recursive requestAnimationFrame loop. It compares the `currentFrameIndex`
+   * to the `targetFrameIndex` (driven by Framer Motion scroll progress), and lerps 
+   * (linearly interpolates) towards the target.
+   * 
+   * This decouples the render rate from the scroll event rate, ensuring buttery smooth 60fps.
+   */
   useEffect(() => {
     if (!isLoaded) return;
 
