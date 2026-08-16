@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { useScroll, useTransform, AnimatePresence, motion } from "framer-motion";
 import { NarrativeOverlay } from "./NarrativeOverlay";
 import { CaseStudiesGrid } from "./CaseStudiesGrid";
@@ -114,7 +114,7 @@ export function ScrollyCanvas() {
    * 
    * @param index - The target frame index to draw.
    */
-  const drawFrame = (index: number) => {
+  const drawFrame = useCallback((index: number) => {
     const canvas = canvasRef.current;
     const img = imagesRef.current[index];
     if (!canvas || !img || !img.complete) return;
@@ -157,7 +157,7 @@ export function ScrollyCanvas() {
 
     ctx.drawImage(img, offsetX, offsetY, renderWidth, renderHeight);
     ctx.restore();
-  };
+  }, []);
 
   /**
    * Effect: High-Performance Animation Loop
