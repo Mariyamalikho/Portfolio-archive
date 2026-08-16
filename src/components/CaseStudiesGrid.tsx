@@ -134,7 +134,7 @@ export function CaseStudiesGrid() {
                 <div className="space-y-8 relative z-10">
                   <div className="flex justify-between items-start">
                     <span className="font-mono text-xs text-neutral-500 uppercase tracking-widest">
-                      ID: {study.id} // {study.timeline}
+                      ID: {study.id} {'//'} {study.timeline}
                     </span>
                     <div className="h-10 w-10 rounded-lg border border-white/[0.06] bg-[#0E0E10] flex items-center justify-center text-neutral-400 group-hover:text-white group-hover:border-purple-500/30 group-hover:bg-[#121215] transition-all duration-300">
                       <IconComponent className="w-5 h-5" />
