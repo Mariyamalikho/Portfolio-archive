@@ -41,14 +41,14 @@ export function Footer() {
           </p>
           
           <div className="flex items-center gap-4">
-            <a href="#" className="p-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 transition-colors" aria-label="GitHub">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-neutral-300 w-5 h-5"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.03c3.18-.3 6.5-1.5 6.5-7.1a5.1 5.1 0 0 0-1.4-3.5a4.7 4.7 0 0 0-.1-3.6s-1.1-.3-3.6 1.4a12.8 12.8 0 0 0-7 0C7.8 1 6.7 1.3 6.7 1.3a4.7 4.7 0 0 0-.1 3.6 5.1 5.1 0 0 0-1.4 3.5c0 5.6 3.3 6.8 6.5 7.1a4.8 4.8 0 0 0-1 3.03v4"></path><path d="M9 20c-4 1-5-2-5-2"></path></svg>
+            <a href="https://github.com/Mariyamalikho" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-purple-500/50 hover:shadow-[0_0_15px_rgba(168,85,247,0.3)] transition-all group" aria-label="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-neutral-300 group-hover:text-white transition-colors w-5 h-5"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.03c3.18-.3 6.5-1.5 6.5-7.1a5.1 5.1 0 0 0-1.4-3.5a4.7 4.7 0 0 0-.1-3.6s-1.1-.3-3.6 1.4a12.8 12.8 0 0 0-7 0C7.8 1 6.7 1.3 6.7 1.3a4.7 4.7 0 0 0-.1 3.6 5.1 5.1 0 0 0-1.4 3.5c0 5.6 3.3 6.8 6.5 7.1a4.8 4.8 0 0 0-1 3.03v4"></path><path d="M9 20c-4 1-5-2-5-2"></path></svg>
             </a>
-            <a href="#" className="p-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 transition-colors" aria-label="LinkedIn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-neutral-300 w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            <a href="https://www.linkedin.com/in/mariyamali-khokhar/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-purple-500/50 hover:shadow-[0_0_15px_rgba(168,85,247,0.3)] transition-all group" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-neutral-300 group-hover:text-white transition-colors w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
             </a>
-            <a href="#" className="p-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 transition-colors" aria-label="Website">
-              <Globe className="w-5 h-5 text-neutral-300" />
+            <a href="https://mariyamalikhokhar.com/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-purple-500/50 hover:shadow-[0_0_15px_rgba(168,85,247,0.3)] transition-all group" aria-label="Website">
+              <Globe className="w-5 h-5 text-neutral-300 group-hover:text-white transition-colors" />
             </a>
           </div>
         </motion.div>
