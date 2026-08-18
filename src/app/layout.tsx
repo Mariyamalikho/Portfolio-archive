@@ -5,8 +5,23 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Creative Developer Portfolio",
-  description: "A high-end scrollytelling portfolio",
+  title: "Mariyam Ali Khokhar | Software Engineer",
+  description: "A high-end scrollytelling portfolio showcasing digital innovation, IT systems, and visual communication.",
+  keywords: ["Software Engineer", "Web Developer", "React", "Next.js", "Portfolio", "Mariyam Ali Khokhar"],
+  authors: [{ name: "Mariyam Ali Khokhar" }],
+  openGraph: {
+    title: "Mariyam Ali Khokhar | Software Engineer",
+    description: "A high-end scrollytelling portfolio showcasing digital innovation, IT systems, and visual communication.",
+    url: "https://mariyamalikhokhar.com",
+    siteName: "Mariyam Ali Khokhar Portfolio",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mariyam Ali Khokhar | Software Engineer",
+    description: "A high-end scrollytelling portfolio showcasing digital innovation, IT systems, and visual communication.",
+  },
 };
 
 export default function RootLayout({
