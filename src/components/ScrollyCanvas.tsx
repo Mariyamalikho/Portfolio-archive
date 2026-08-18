@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { useScroll, useTransform, AnimatePresence, motion } from "framer-motion";
 import { NarrativeOverlay } from "./NarrativeOverlay";
+import { ParticleBackground } from "./ParticleBackground";
 import { CaseStudiesGrid } from "./CaseStudiesGrid";
 
 const FRAME_COUNT = 120;
@@ -259,7 +260,7 @@ export function ScrollyCanvas() {
       </AnimatePresence>
 
       {/* Main 450vh scroll track */}
-      <div ref={containerRef} className="relative h-[350vh] w-full bg-[#0B0B0C] select-none">
+      <div ref={containerRef} className="relative h-[350vh] w-full select-none">
         {/* Sticky child container */}
         <div className="sticky top-0 left-0 h-screen w-screen overflow-hidden">
           
@@ -289,15 +290,14 @@ export function ScrollyCanvas() {
           />
 
           {/* Subtle vignette layer overlay */}
-          <div className="absolute inset-0 bg-[#0B0B0C]/10 pointer-events-none" />
+          <div className="absolute inset-0 bg-[#0B0B0C]/10 pointer-events-none z-20" />
           
           {/* Render Narrative Overlay */}
-          <NarrativeOverlay scrollYProgress={scrollYProgress} />
+          <div className="absolute inset-0 z-30 pointer-events-none">
+            <NarrativeOverlay scrollYProgress={scrollYProgress} />
+          </div>
         </div>
       </div>
-
-      {/* Static 3-Column Luxury Case Studies Ledger */}
-      <CaseStudiesGrid />
     </>
   );
 }
