@@ -108,7 +108,7 @@ export default async function CaseStudy({ params }: Props) {
             </p>
             <blockquote className="border-l-4 border-purple-500 pl-6 md:pl-10 py-2">
               <p className="text-2xl md:text-4xl font-medium tracking-tight text-white leading-tight">
-                "{project.challenge.quote}"
+                &quot;{project.challenge.quote}&quot;
               </p>
             </blockquote>
           </div>
