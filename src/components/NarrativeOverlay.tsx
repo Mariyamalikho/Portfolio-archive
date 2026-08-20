@@ -35,7 +35,7 @@ export function NarrativeOverlay({ scrollYProgress }: NarrativeOverlayProps) {
         </h1>
         
         <p className="text-base md:text-lg text-neutral-300 max-w-sm md:max-w-md leading-relaxed font-normal drop-shadow-xl">
-          I don&apos;t just make things look good. I build the systems that make them work. Crafting digital experiences with precision and scale.
+          I don&apos;t just make things look good. I build the systems that make them work. Developing digital experiences with precision and scale.
         </p>
 
         {/* Scroll Indicator */}
