@@ -23,9 +23,34 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const project = PROJECTS.find((p) => p.slug === slug);
   if (!project) return { title: "Not Found" };
+  
+  const ogImage = `https://mariyamalikhokhar.com${project.heroImage}`;
+  
   return {
-    title: `${project.title} — Case Study`,
+    title: `${project.title} — Case Study | Mariyam Ali Khokhar`,
     description: project.shortDescription,
+    openGraph: {
+      title: `${project.title} — Case Study`,
+      description: project.shortDescription,
+      url: `https://mariyamalikhokhar.com/work/${slug}`,
+      siteName: "Mariyam Ali Khokhar Portfolio",
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: `${project.title} Case Study`,
+        },
+      ],
+      locale: "en_US",
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} — Case Study`,
+      description: project.shortDescription,
+      images: [ogImage],
+    },
   };
 }
 
